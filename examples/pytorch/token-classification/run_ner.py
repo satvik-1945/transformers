@@ -442,6 +442,7 @@ def main():
     def tokenize_and_align_labels(examples):
         tokenized_inputs = tokenizer(
             examples[text_column_name],
+            examples[boxes],
             padding=padding,
             truncation=True,
             max_length=data_args.max_seq_length,
